@@ -7,8 +7,8 @@ CALL SYSPROC.ADMIN_CMD('DESCRIBE TABLE employee');
 
 SELECT * FROM employee;
 
--- ADD name data_type
--- DROP name data to remove
+-- ALTER TABLE table ADD name data_type
+-- DELETE FROM name data to remove
 
 ALTER TABLE employee
 ADD birthDate DATE;
@@ -19,3 +19,4 @@ ADD sepDate DATE;
 
 -- UPDATE TABLE after altering
 CALL SYSPROC.ADMIN_CMD('REORG TABLE employee');
+
