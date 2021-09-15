@@ -36,3 +36,19 @@ VALUES ('2011-02-01','PS0003',123.55);
 
 INSERT INTO pricehist
 VALUES ('2011-02-01','NB0005',-1.85);
+
+-- to add 10% for prices with the effective dates
+UPDATE priceHist SET unitPrice = 1.1 * unitPrice WHERE effDate = '2010-05-15';
+
+-- to delete that product 
+DELETE FROM pricehist WHERE prodCode = 'NB0005;
+DELETE FROM product WHERE prodCode = 'NB0005';
+
+-- to re-insert that product 
+INSERT INTO product
+VALUES('NB0005', 'Apple Mac Book Pro', 'pc');
+
+INSERT INTO pricehist
+VALUES ('2010-05-15', 'NB0005', 350);
+
+SELECT * FROM pricehist;
