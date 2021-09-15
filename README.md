@@ -1,1 +1,1 @@
-# sequel
+# sql stuff 
