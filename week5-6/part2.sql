@@ -26,5 +26,6 @@ WHERE lastName LIKE '_E%';
 -- for DATES, fetch stuff with bdays in between 1961 and 1971
 SELECT lastname, firstNme, birthDate
 FROM emp 
+WHERE YEAR(birthDate) BETWEEN 1961 AND 1971;
 --WHERE birthDate >= '1961-01-01' AND birthDate <= '1971-12-31';
-WHERE birthDate BETWEEN '1961-01-01' AND '1971-12-31';
+--WHERE birthDate BETWEEN '1961-01-01' AND '1971-12-31';
