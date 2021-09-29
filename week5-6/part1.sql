@@ -1,3 +1,9 @@
+/**
+DDL = data definition language (declaring stuff)
+DML = data manipulation language (re-assigning stuff)
+*/
+
+
 -- select all columns from the tables
 SELECT * FROM emp;
 SELECT * FROM dept;
