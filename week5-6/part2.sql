@@ -6,7 +6,7 @@ SELECT lastName, firstNme, job, salary
 FROM emp 
 WHERE salary BETWEEN 30000 AND 40000;
 
--- you can use NOT IN (list)
+-- salary greater than 60k and job is not pres or manager
 SELECT lastName, firstNme, job, salary 
 FROM emp 
 WHERE salary >= 60000 AND job NOT IN('PRES', 'MANAGER');
@@ -23,3 +23,8 @@ SELECT lastName, job, salary
 FROM emp 
 WHERE lastName LIKE '_E%';
 
+-- for DATES, fetch stuff with bdays in between 1961 and 1971
+SELECT lastname, firstNme, birthDate
+FROM emp 
+--WHERE birthDate >= '1961-01-01' AND birthDate <= '1971-12-31';
+WHERE birthDate BETWEEN '1961-01-01' AND '1971-12-31';
