@@ -33,3 +33,20 @@ SELECT lastname || ', ' || firstnme AS "FULLNAME", job FROM emp;
 SELECT deptName, mgrNo
 FROM dept 
 WHERE mgrNo IS NULL;
+
+-- display by lastnames in ascending order.
+SELECT lastName, firstnme, workDept, hireDate
+FROM emp
+ORDER BY lastName;
+--ORDER BY lastName DESC; -- for descending
+
+-- you can sort order by more than one column
+SELECT workDept, lastName, firstnme, hireDate
+FROM emp
+ORDER BY workdept, lastName;
+-- ORDER BY 1, 2; also works, in order of SELECT
+
+-- compute length of service in years
+SELECT lastName, firstNme, birthDate, hireDate, 2020-YEAR(hireDate) AS "length of service"
+FROM emp
+ORDER BY "length of service" DESC;
