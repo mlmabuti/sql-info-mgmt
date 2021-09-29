@@ -26,3 +26,10 @@ FROM emp;
 -- to fix the ugliness
 SELECT CONCAT(CONCAT(lastname,', '), firstnme) AS "full name", job
 from emp;
+-- without using CONCAT(), you can use double pipe ||
+SELECT lastname || ', ' || firstnme AS "FULLNAME", job FROM emp;
+
+-- TESTING FOR NULL, using IS NULL
+SELECT deptName, mgrNo
+FROM dept 
+WHERE mgrNo IS NULL;
