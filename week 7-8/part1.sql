@@ -31,11 +31,11 @@ GROUP BY job;
 
 -- get earliest hire date 
 SELECT MIN(hireDate) AS "earliest hire"
-from emp;
+FROM emp;
 
 -- get earliest hire date PER JOB
 SELECT job, MIN(hireDate) AS "earliest hire"
-from emp 
+FROM emp 
 GROUP BY job;
 
 -- most recent hire
@@ -44,5 +44,5 @@ FROM emp;
 
 -- most recently hired employee
 SELECT lastName, firstnme, hireDate
-from emp 
+FROM emp 
 ORDER BY hireDate DESC;
