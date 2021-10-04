@@ -9,7 +9,7 @@ SELECT payTerm, COUNT(payterm) "Number of Customers"
 FROM customer 
 WHERE address  LIKE '%NY%'  AND payTerm= '45D' 
 GROUP BY payTerm;
-
+--
 SELECT payTerm, COUNT(payterm) "Number of Customers" 
 FROM customer WHERE address  LIKE '%NY%' 
 GROUP BY payTerm 
