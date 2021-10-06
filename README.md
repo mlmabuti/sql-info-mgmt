@@ -1,1 +1,1 @@
-# sql stuff 
+# sql scripts from infoman
