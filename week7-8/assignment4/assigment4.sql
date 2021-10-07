@@ -43,9 +43,10 @@ GROUP BY gender;
 
 --SQL SCRIPT 3: Which transaction has the biggest number of total quantities
 -- delivered?  Refer to the RECEIPTDETAIL table.  Sort from the highest to the lowest quantity. (20 points)
-SELECT transno, MAX(quantity) "Largest quantity"
+SELECT transno, SUM(quantity) "Largest quantity"
 FROM receiptdetail
 GROUP BY transno
+HAVING SUM(quantity) = 1
 ORDER BY MAX(quantity) DESC;
 
 --SQL SCRIPT 4: Generate the total payment made per transaction
@@ -54,12 +55,30 @@ ORDER BY MAX(quantity) DESC;
 --The listing should be grouped by year with the highest amount first on that year.
 SELECT YEAR(paydate)"Year",  transno, SUM(amount) "Total"
 FROM payment
-WHERE amount > 999
 GROUP BY YEAR(paydate), transno
+HAVING SUM(amount) > 999
 ORDER BY SUM(amount) DESC;
+
+-- count records less than 1k
+--SELECT YEAR(paydate) "YEAR", COUNT(transno)
+--FROM payment 
+--GROUP BY YEAR(paydate)
+--HAVING SUM(amount) < 1000;
+
 
 --SQL SCRIPT 5: Which product code has multiple changes in prices in PRICEHIST table? 
 SELECT prodCode, COUNT(prodCode) "Count" 
 FROM pricehist
 GROUP BY prodCode
 HAVING COUNT(prodCode) > 1;
+
+-- avg of pf0003
+SELECT prodCode, AVG(unitPrice)
+FROM pricehist
+GROUP BY prodCode
+HAVING prodCOde = 'PF0003';
+
+-- last hiring date 
+SELECT hiredate 
+FROM personnel
+ORDER BY hiredate DESC;
