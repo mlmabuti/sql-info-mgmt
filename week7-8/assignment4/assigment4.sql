@@ -10,9 +10,14 @@ FROM personnel
 GROUP BY gender;
 
 -- script 3: get highest transNo purchase.
-SELECT transNo, quantity
-FROM receiptDetail
-ORDER BY quantity DESC;
+--SELECT transNo, quantity
+--FROM receiptDetail
+--ORDER BY quantity DESC;
+
+SELECT transno, SUM(quantity) "Largest quantity"
+FROM receiptdetail
+GROUP BY transno
+ORDER BY MAX(quantity) DESC;
 
 
 -- script 4: get total amount paid per year, group all transNos and sum their amounts.
@@ -43,10 +48,15 @@ GROUP BY gender;
 
 --SQL SCRIPT 3: Which transaction has the biggest number of total quantities
 -- delivered?  Refer to the RECEIPTDETAIL table.  Sort from the highest to the lowest quantity. (20 points)
+--SELECT transno, SUM(quantity) "Largest quantity"
+--FROM receiptdetail
+--GROUP BY transno
+--HAVING SUM(quantity) = 1
+--ORDER BY MAX(quantity) DESC;
+
 SELECT transno, SUM(quantity) "Largest quantity"
 FROM receiptdetail
 GROUP BY transno
-HAVING SUM(quantity) = 1
 ORDER BY MAX(quantity) DESC;
 
 --SQL SCRIPT 4: Generate the total payment made per transaction
@@ -82,3 +92,4 @@ HAVING prodCOde = 'PF0003';
 SELECT hiredate 
 FROM personnel
 ORDER BY hiredate DESC;
+
