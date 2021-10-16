@@ -1,1 +1,1 @@
-# sql scripts from infoman
+# sql scripts for information management
