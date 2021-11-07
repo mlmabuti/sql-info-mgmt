@@ -93,7 +93,7 @@ ORDER BY SUM(py.amount) DESC;
 --- END
 
 -- DRE SOLUTION ON SCRIPT 5
-select p.prodcode, p.description, p.unit, b.unitprice AS PRICE
+select p.prodcode, p.description, p.unit, b.unitprice
 from product p 
 join (
 select prodcode, max(effdate) a_1
