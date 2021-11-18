@@ -123,7 +123,7 @@ ON ph.prodcode = v2.prodcode
 WHERE ph.effdate IN v2."effdate" AND v2.salesdate >= ph.effdate
 GROUP BY c.custno, c.custname;
 
-SELECT * FROM v4;
+SELECT * FROM v4 ORDER BY 3 DESC;
 
 -- QUIZ CHECK WHO BOUGHT THE PRODUCTS
 --CREATE VIEW v4 AS
