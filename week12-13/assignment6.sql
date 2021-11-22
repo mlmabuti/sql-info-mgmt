@@ -112,6 +112,14 @@ GROUP BY v1.transno, v1.salesdate, v1.prodcode, v1.quantity;
 DROP VIEW v2;
 SELECT * FROM v2;
 
+SELECT p.prodcode, p.unit, p.description, SUM(ph.unitprice*v2.quantity) "TOTAL"
+FROM product p 
+JOIN v2
+ON v2.prodcode = p.prodcode
+JOIN pricehist ph
+ON ph.prodcode = v2.prodcode
+GROUP BY p.prodcode, p.description, p.unit;
+
 CREATE VIEW v3 AS
 SELECT p.prodcode, p.unit, p.description, SUM(ph.unitprice*v2.quantity) "TOTAL"
 FROM product p 
@@ -124,9 +132,22 @@ GROUP BY p.prodcode, p.description, p.unit;
 
 SELECT * FROM v3;
 
+
 SELECT SUM("TOTAL")
 FROM v3;
--------------------------------------------------------------------------
+---------------------------------------10-----------------------------------------
+
+SELECT c.custno, c.custname, SUM(ph.unitprice*v2.quantity) "TOTAL"
+FROM customer c 
+JOIN sales s 
+ON s.custno = c.custno
+JOIN v2 
+ON v2.transno = s.transno
+JOIN pricehist ph 
+ON ph.prodcode = v2.prodcode 
+GROUP BY c.custno, c.custname
+ORDER BY 3 DESC;
+
 CREATE VIEW v4 AS
 SELECT * FROM (
 SELECT c.custno, c.custname, SUM(ph.unitprice*v2.quantity) "TOTAL"
