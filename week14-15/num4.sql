@@ -34,7 +34,7 @@ JOIN v2
 ON v2.prodcode = p.prodcode
 JOIN pricehist ph
 ON ph.prodcode = v2.prodcode
-WHERE ph.effdate IN v2."effdate" AND v2.salesdate >= ph.effdate
+WHERE ph.effdate IN v2."effdate" AND v2.salesdate >= ph.effdate -- this may probably be unnecessary
 GROUP BY v2.transno;
 
 SELECT * FROM view_total_sales
