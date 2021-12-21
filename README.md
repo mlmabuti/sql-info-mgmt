@@ -1,4 +1,4 @@
-# sql scripts for information management
+# A collection-repo for Information Management
 ### Context
 This repository was made for stashing queries/sql scripts for information management assignments.
 
