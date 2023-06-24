@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>New Data Adapter 1</name><driver>com.ibm.db2.jcc.DB2Driver</driver><username>wsy73676</username><password>UGFxPQnhYQHWExJr</password><savePassword>true</savePassword><url>jdbc:db2://54a2f15b-5c0f-46df-8954-7e38e612c2bd.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud:32733/bludb:sslConnection=true;</url><database></database><serverAddress></serverAddress><classpath>/home/ryu/Downloads/dsdriver/java/db2jcc4.jar</classpath></jdbcDataAdapter>

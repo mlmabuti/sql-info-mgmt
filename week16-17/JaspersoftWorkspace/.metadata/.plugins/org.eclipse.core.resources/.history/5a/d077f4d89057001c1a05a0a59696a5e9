@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>TestDB2CloudConnection</name><driver>com.ibm.db2.jcc.DB2Driver</driver><username></username><password></password><savePassword>true</savePassword><url></url><database></database><serverAddress></serverAddress></jdbcDataAdapter>
