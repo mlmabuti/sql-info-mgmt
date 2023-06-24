@@ -1,3 +1,4 @@
+![image](https://github.com/mlmabuti/sql-stash/assets/72655919/b56dcc5c-930c-449f-9152-bdc9d734aa49)
 
 IMPORTANT NOTE:  DO NOT USE INNER JOIN, FULL JOIN, LEFT JOIN, RIGHT JOIN IN YOUR SOLUTIONS. Stick with the WHERE clause in connecting the primary and foreign keys of the tables.
 Query 1: Ranking within the entire result
