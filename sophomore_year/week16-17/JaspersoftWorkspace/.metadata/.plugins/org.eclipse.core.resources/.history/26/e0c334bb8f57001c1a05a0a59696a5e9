@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestReport" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="45bcf3d4-321a-4693-b8d6-dc42d212031c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB2ConnectionTest.xml"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM EMPLOYEE]]>
+	</queryString>
+	<field name="EMPNO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="EMPNO"/>
+		<property name="com.jaspersoft.studio.field.label" value="EMPNO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="EMPLOYEE"/>
+	</field>
+	<field name="LASTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LASTNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="LASTNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="EMPLOYEE"/>
+	</field>
+	<field name="FIRSTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="FIRSTNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="FIRSTNAME"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="EMPLOYEE"/>
+	</field>
+	<field name="GENDER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="GENDER"/>
+		<property name="com.jaspersoft.studio.field.label" value="GENDER"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="EMPLOYEE"/>
+	</field>
+	<field name="BIRTHDATE" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="BIRTHDATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="BIRTHDATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="EMPLOYEE"/>
+	</field>
+	<field name="HIREDATE" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="HIREDATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="HIREDATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="EMPLOYEE"/>
+	</field>
+	<field name="SEPDATE" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="SEPDATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="SEPDATE"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="EMPLOYEE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
